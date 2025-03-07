@@ -15,13 +15,13 @@ const LoveLetter = ({ content }: LoveLetterProps) => {
 
   return (
     <div className="w-full max-w-lg mx-auto my-8">
-      <div className={`envelope relative ${isOpen ? 'open' : ''} bg-rose-100 rounded-lg overflow-hidden shadow-love`}>
+      <div className={`envelope relative ${isOpen ? 'open' : ''} bg-rose-100 rounded-lg overflow-hidden shadow-lg transition-all duration-500`}>
         <div className="envelope-front p-4 rounded-t-lg bg-rose-300 flex items-center justify-center">
           <Mail className="text-rose-600 h-8 w-8 mr-2" />
           <span className="text-rose-800 font-medium">Thư tình dành cho em</span>
         </div>
         
-        <div className="p-6 relative bg-white">
+        <div className={`p-6 relative bg-white transform transition-all duration-500 ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0 pointer-events-none'}`}>
           <div className="letter bg-rose-50 p-6 rounded-lg shadow-sm">
             <div className="text-center mb-3">
               <Heart className="inline-block text-rose-500 fill-rose-400 mb-2" />

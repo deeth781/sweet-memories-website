@@ -6,9 +6,8 @@ import PhotoAlbum from '../components/PhotoAlbum';
 import MusicPlayer from '../components/MusicPlayer';
 import LoveQuiz from '../components/LoveQuiz';
 import CountdownTimer from '../components/CountdownTimer';
-import GiftButton from '../components/GiftButton';
 import FloatingHearts from '../components/FloatingHearts';
-import { Heart, Image, Music, Gift, Brain, Clock, Mail } from 'lucide-react';
+import { Heart, Image, Music, Brain, Clock, Mail } from 'lucide-react';
 
 // Thay thế tên người yêu và các nội dung khác trong đây
 const LOVED_ONE_NAME = "Em Yêu";
@@ -47,9 +46,6 @@ const QUIZ_QUESTIONS = [
     correctAnswer: 3
   }
 ];
-
-// Nội dung quà tặng
-const GIFT_MESSAGE = "Món quà đặc biệt dành tặng em nhân ngày 8/3 là...\n\nAnh đã đặt chỗ cho chúng ta có một buổi tối lãng mạn tại nhà hàng yêu thích của em vào cuối tuần này!\n\nHãy chuẩn bị xinh đẹp nhé, người yêu của anh!";
 
 const Index = () => {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -110,13 +106,6 @@ const Index = () => {
         return <LoveQuiz questions={QUIZ_QUESTIONS} onComplete={handleQuizComplete} />;
       case "countdown":
         return <CountdownTimer targetDate={COUNTDOWN_DATE} eventName={EVENT_NAME} />;
-      case "gift":
-        return (
-          <GiftButton
-            message={GIFT_MESSAGE}
-            image="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
-          />
-        );
       default:
         return <LoveLetter content={LOVE_LETTER_CONTENT} />;
     }
@@ -220,18 +209,6 @@ const Index = () => {
             >
               <Clock className="h-4 w-4 mr-1 md:mr-2" />
               <span>Đếm ngược</span>
-            </button>
-            
-            <button
-              onClick={() => setActiveSection("gift")}
-              className={`flex items-center whitespace-nowrap px-3 md:px-4 py-2 rounded-full transition-colors ${
-                activeSection === "gift"
-                  ? "bg-love-500 text-white"
-                  : "bg-white hover:bg-love-100 text-love-700"
-              }`}
-            >
-              <Gift className="h-4 w-4 mr-1 md:mr-2" />
-              <span>Quà tặng</span>
             </button>
           </div>
         </div>
