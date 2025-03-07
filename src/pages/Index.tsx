@@ -11,19 +11,11 @@ import { Heart, Image, Music, Brain, Clock, Mail } from 'lucide-react';
 
 // Thay thế tên người yêu và các nội dung khác trong đây
 const LOVED_ONE_NAME = "Em Yêu";
-const COUNTDOWN_DATE = new Date("2023-04-20"); // Đổi thành ngày kỷ niệm của bạn
+const COUNTDOWN_DATE = new Date("2024-02-28"); // Đổi thành ngày kỷ niệm của bạn
 const EVENT_NAME = "Kỷ Niệm 100 Ngày Yêu";
 
 // Nội dung thư tình
-const LOVE_LETTER_CONTENT = `Em yêu dấu của anh,
-
-Nhân dịp 8/3, anh muốn dành tặng em món quà đặc biệt này - một trang web chứa đựng tình yêu của anh dành cho em.
-
-Mỗi ngày bên em là một ngày tuyệt vời trong cuộc đời anh. Em là điều tuyệt nhất mà anh có được, là động lực để anh cố gắng mỗi ngày.
-
-Cảm ơn em vì đã luôn ở bên anh, chia sẻ những khoảnh khắc hạnh phúc và cả những lúc khó khăn.
-
-Chúc em ngày 8/3 thật vui vẻ và hạnh phúc, người phụ nữ của anh!`;
+const LOVE_LETTER_CONTENT = `Hôm Nay Là Ngày Mùng 8/3 Em Chúc Chị Một Ngày Thật Vui vẻ Và Sớm Công Khai Mối Quan Hệ Của Mình -.- Yêu `;
 
 // Danh sách câu hỏi quiz
 const QUIZ_QUESTIONS = [
@@ -31,19 +23,19 @@ const QUIZ_QUESTIONS = [
     id: 1,
     question: "Chúng ta đã gặp nhau lần đầu ở đâu?",
     options: ["Quán cà phê", "Trường học", "Buổi tiệc của bạn chung", "Trên mạng xã hội"],
-    correctAnswer: 2 // Index (0-based) của câu trả lời đúng
+    correctAnswer: 4 // Index (0-based) của câu trả lời đúng
   },
   {
     id: 2,
     question: "Ngày kỷ niệm yêu của chúng ta là ngày nào?",
-    options: ["20/04", "14/02", "01/01", "08/03"],
-    correctAnswer: 0
+    options: ["20/04", "14/02", "28/02", "08/03"],
+    correctAnswer: 3
   },
   {
     id: 3,
     question: "Món ăn yêu thích của em là gì?",
-    options: ["Lẩu", "Bánh mì", "Bún bò", "Cơm tấm"],
-    correctAnswer: 3
+    options: ["Lẩu", "Bánh mì", "Bún bò", "Chị"],
+    correctAnswer: 
   }
 ];
 
@@ -97,9 +89,9 @@ const Index = () => {
       case "music":
         return (
           <MusicPlayer
-            src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+            src="https://files.catbox.moe/rxvh83.mp3"
             title="Bài hát của chúng ta"
-            artist="Ca sĩ yêu thích của em"
+            artist="Hòa Minz"
           />
         );
       case "quiz":
@@ -117,7 +109,7 @@ const Index = () => {
       <div className="love-loader">
         <div className="text-center">
           <Heart className="h-16 w-16 text-white heart-beat fill-white/80" />
-          <p className="text-white mt-4 text-xl">Đang tải trang tình yêu...</p>
+          <p className="text-white mt-4 text-xl">Đang tải trang...</p>
         </div>
       </div>
     );
@@ -142,7 +134,7 @@ const Index = () => {
             Gửi tới {LOVED_ONE_NAME}
           </h1>
           <p className="text-love-600 max-w-md mx-auto">
-            Một trang web đặc biệt dành riêng cho người con gái anh yêu nhất
+          Yêu Chị -.-
           </p>
         </div>
       </header>
@@ -160,7 +152,7 @@ const Index = () => {
               }`}
             >
               <Mail className="h-4 w-4 mr-1 md:mr-2" />
-              <span>Thư tình</span>
+              <span>Thư🎀</span>
             </button>
             
             <button

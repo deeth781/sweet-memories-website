@@ -47,7 +47,7 @@ const WelcomeScreen = ({ name, onContinue }: WelcomeScreenProps) => {
         </h1>
         
         <p className="text-xl sm:text-2xl text-white mb-8 opacity-90">
-          Chào mừng đến với trang web đặc biệt dành riêng cho em trong ngày 8/3
+          Chào mừng Chị Đến Với Trang Này🐿
         </p>
         
         <div className="flex justify-center mb-10">
@@ -60,7 +60,7 @@ const WelcomeScreen = ({ name, onContinue }: WelcomeScreenProps) => {
           onClick={handleContinue}
           className="bg-white text-love-600 px-8 py-3 rounded-full text-xl font-medium transition-all duration-300 hover:bg-opacity-90 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-30 shadow-lg"
         >
-          Bắt đầu hành trình
+          Bấm Vào Đây Nè Vợ Ơi -.-
         </button>
       </div>
     </div>
