@@ -23,19 +23,19 @@ const QUIZ_QUESTIONS = [
     id: 1,
     question: "Chúng ta đã gặp nhau lần đầu ở đâu?",
     options: ["Quán cà phê", "Trường học", "Buổi tiệc của bạn chung", "Trên mạng xã hội"],
-    correctAnswer: 4 // Index (0-based) của câu trả lời đúng
+    correctAnswer: 3 // Index của câu trả lời đúng (0-based)
   },
   {
     id: 2,
     question: "Ngày kỷ niệm yêu của chúng ta là ngày nào?",
     options: ["20/04", "14/02", "28/02", "08/03"],
-    correctAnswer: 3
+    correctAnswer: 2
   },
   {
     id: 3,
     question: "Món ăn yêu thích của em là gì?",
     options: ["Lẩu", "Bánh mì", "Bún bò", "Chị"],
-    correctAnswer: 
+    correctAnswer: 3 // Sửa lỗi thiếu giá trị
   }
 ];
 
